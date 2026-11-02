@@ -18,9 +18,8 @@ def add_student():
     try:
         grade = float(input("Grade (0-100): "))
     except ValueError:
-        print("Please enter a numeric grade.")
+        print("Invalid input! Please enter a number between 0 and 100.")
         return
-
     if grade < 0 or grade > 100:
         print("Grade must be between 0 and 100.")
         return
