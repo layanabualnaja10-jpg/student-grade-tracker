@@ -1,6 +1,6 @@
 # Student Grade Tracker
 
-A beginner-friendly Python application for tracking student grades and monitoring class performance.
+A beginner-friendly Python command-line application for tracking student grades, managing student records, and calculating class statistics.
 
 ## Features
 
