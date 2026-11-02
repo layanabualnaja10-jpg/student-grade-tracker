@@ -8,6 +8,7 @@ A simple Python command-line project for managing student grades.
 - View all students and grades
 - Calculate the class average
 - Handle empty names, non-numeric grades, and invalid menu choices
+- Validate grades to ensure they are between 0 and 100
 
 ## Requirements
 
