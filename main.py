@@ -21,6 +21,10 @@ def add_student():
         print("Please enter a numeric grade.")
         return
 
+    if grade < 0 or grade > 100:
+        print("Grade must be between 0 and 100.")
+        return
+
     # Improvement opportunity for Unit 3:
     # This version checks that the grade is numeric, but does not yet
     # reject values outside the 0-100 range.
