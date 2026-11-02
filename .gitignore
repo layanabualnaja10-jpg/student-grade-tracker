@@ -17,3 +17,6 @@ env/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Local student data
+students.json

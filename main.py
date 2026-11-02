@@ -1,3 +1,6 @@
+import json
+import os
+
 """Student Grade Tracker
 
 A beginner-friendly command-line app for recording student grades
@@ -5,6 +8,22 @@ and viewing class statistics.
 """
 
 students = []
+
+def save_students():
+    """Save student records to a JSON file."""
+    with open("students.json", "w") as file:
+        json.dump(students, file, indent=4)
+
+
+def load_students():
+    """Load student records from a JSON file."""
+    global students
+
+    if os.path.exists("students.json"):
+        with open("students.json", "r") as file:
+            students = json.load(file)
+    else:
+        students = []
 
 
 def add_student():
@@ -28,6 +47,7 @@ def add_student():
     # This version checks that the grade is numeric, but does not yet
     # reject values outside the 0-100 range.
     students.append({"name": name, "grade": grade})
+    save_students()
     print(f"Added {name}.")
 
 
@@ -79,4 +99,5 @@ def main():
 
 
 if __name__ == "__main__":
+    load_students()
     main()
